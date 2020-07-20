@@ -82,6 +82,10 @@ export function getTagProviderSettings(workspacePath: string | null | undefined)
     if (dependencies['@nuxtjs/vuetify'] || devDependencies['@nuxtjs/vuetify']) {
       dependencies['vuetify'] = true;
     }
+
+    if (devDependencies['quasar']) {
+      dependencies['quasar'] = devDependencies['quasar'];
+    }
     // Quasar v1+:
     if (dependencies['quasar']) {
       settings['quasar'] = true;
